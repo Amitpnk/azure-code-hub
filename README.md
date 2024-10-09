@@ -53,7 +53,7 @@ Below is a list of Azure services covered in this repository. Click on each serv
 - [ ] Azure Application Gateway
 
 ### Security
-- [ ] Azure Key Vault
+- [x] Azure Key Vault
 - [ ] Azure Security Center
 - [ ] Azure Policy
 
