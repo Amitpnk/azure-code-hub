@@ -2,3 +2,6 @@
 
 var secretValue = await KeyVaultExample.GetSecretAsync("MySecret");
 Console.WriteLine($"Retrieved Secret: {secretValue}");
+
+await KeyVaultExample.UseKeyAsync();
+
