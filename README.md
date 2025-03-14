@@ -62,6 +62,12 @@ Below is a list of Azure services covered in this repository. Click on each serv
 - [ ] Azure Log Analytics
 - [ ] Azure Application Insights
 
+### Messging
+- [ ] Azure Queu
+- [ ] Azure EventHub
+- [ ] Azure Service Bus
+- [ ] Azure EventGrid
+
 ## Folder Structure
 
 The repository is organized into the following structure:
@@ -95,10 +101,16 @@ azure-code-hub/
 │   ├── azure-security-center/
 │   └── azure-policy/
 │
-└── monitoring/
-    ├── azure-monitor/
-    ├── azure-log-analytics/
-    └── azure-application-insights/
+├── monitoring/
+│    ├── azure-monitor/
+│    ├── azure-log-analytics/
+│    └── azure-application-insights/
+│
+└── messaing/
+    ├── azure-event-hub/
+    ├── azure-service-bus/
+    ├── azure-event-grid/
+    └── azure-storage-queue/
 ```
 
 Each folder contains sample projects and code related to specific Azure services.
