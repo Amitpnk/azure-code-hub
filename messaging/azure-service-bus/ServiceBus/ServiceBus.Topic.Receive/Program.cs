@@ -1,10 +1,11 @@
 ﻿using Azure.Messaging.ServiceBus;
 
-class Program
+namespace ServiceBus.Topic.Receive;
+public class Program
 {
-    private const string connectionString = "<Your-Connection-String>";
-    private const string topicName = "<Your-Topic-Name>";
-    private const string subscriptionName = "<Your-Subscription-Name>";
+    private const string ConnectionString = "<Your-Connection-String>";
+    private const string TopicName = "<Your-Topic-Name>";
+    private const string SubscriptionName = "<Your-Subscription-Name>";
 
     static async Task Main()
     {
@@ -13,8 +14,8 @@ class Program
 
     static async Task ReceiveMessagesFromSubscriptionAsync()
     {
-        await using var client = new ServiceBusClient(connectionString);
-        ServiceBusProcessor processor = client.CreateProcessor(topicName, subscriptionName, new ServiceBusProcessorOptions());
+        await using var client = new ServiceBusClient(ConnectionString);
+        ServiceBusProcessor processor = client.CreateProcessor(TopicName, SubscriptionName, new ServiceBusProcessorOptions());
 
         processor.ProcessMessageAsync += async args =>
         {

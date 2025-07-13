@@ -2,8 +2,8 @@
 
 class Program
 {
-    private const string connectionString = "<Your-Connection-String>";
-    private const string queueName = "<Your-Queue-Name>";
+    private const string ConnectionString = "<Your-Connection-String>";
+    private const string QueueName = "<Your-Queue-Name>";
 
     static async Task Main()
     {
@@ -12,8 +12,8 @@ class Program
 
     static async Task ReceiveMessagesFromQueueAsync()
     {
-        await using var client = new ServiceBusClient(connectionString);
-        ServiceBusProcessor processor = client.CreateProcessor(queueName, new ServiceBusProcessorOptions());
+        await using var client = new ServiceBusClient(ConnectionString);
+        ServiceBusProcessor processor = client.CreateProcessor(QueueName, new ServiceBusProcessorOptions());
 
         processor.ProcessMessageAsync += async args =>
         {
